@@ -5,7 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Alert, AlertDescription } from '@/components/ui/alert';
-import { Building2, User, Lock, AlertCircle, Loader2 } from 'lucide-react';
+import { User, Lock, AlertCircle, Loader2 } from 'lucide-react';
 
 export function Login() {
   const [cpf, setCpf] = useState('');
