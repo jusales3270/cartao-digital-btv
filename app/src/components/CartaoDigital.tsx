@@ -12,7 +12,6 @@ import {
   Clock,
   Shield,
   AlertTriangle,
-  Building2,
   User,
   QrCode
 } from 'lucide-react';
@@ -141,9 +140,21 @@ export function CartaoDigital() {
 
             <div className="relative z-10">
               <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center gap-2">
-                  <Building2 className="w-6 h-6" />
-                  <span className="font-semibold text-sm tracking-wide">PREFEITURA MUNICIPAL</span>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-white/10 rounded-lg p-1.5 backdrop-blur-sm flex items-center justify-center">
+                    <img
+                      src="/brasao.png"
+                      alt="Brasão Boituva"
+                      className="w-full h-full object-contain"
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none';
+                      }}
+                    />
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="font-bold text-xs tracking-wider opacity-80">PREFEITURA DE</span>
+                    <span className="font-bold text-sm tracking-wide">BOITUVA</span>
+                  </div>
                 </div>
                 <Badge className="bg-white/20 text-white border-white/30 backdrop-blur">
                   SERVIDOR
