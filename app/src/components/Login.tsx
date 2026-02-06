@@ -7,6 +7,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { User, Lock, AlertCircle, Loader2 } from 'lucide-react';
 
+import { RetroGrid } from "@/components/ui/retro-grid";
+
 export function Login() {
   const [cpf, setCpf] = useState('');
   const [senha, setSenha] = useState('');
@@ -61,8 +63,9 @@ export function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50 flex items-center justify-center p-4">
-      <div className="w-full max-w-md">
+    <div className="relative min-h-screen flex items-center justify-center p-4 overflow-hidden bg-background">
+      <RetroGrid />
+      <div className="z-10 w-full max-w-md">
         {/* Logo e Título */}
         <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center w-28 h-28 mb-2">
